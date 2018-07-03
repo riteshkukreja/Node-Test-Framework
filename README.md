@@ -377,7 +377,7 @@ const _it = (title, callback) => {
 
 Now if we run our testcases, we will get something like this.
 
-![Colored Testcase result](images/colored_tc_framework.png)
+![Colored Testcase result](https://github.com/riteshkukreja/Node-Test-Framework/blob/master/images/colored_tc_framework.PNG)
 
 ## Conclusion
 Congratulations! You have successfully build your own testing framework. Now that we know how test frameworks work under the hood, maybe we don't need to fight anymore about which one is better.
