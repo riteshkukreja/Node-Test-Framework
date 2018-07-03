@@ -1,0 +1,13 @@
+{
+  "name": "test-runner",
+  "version": "1.0.0-SNAPSHOT",
+  "devDependencies": {
+    "chai": "^4.1.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1"
+  }
+}

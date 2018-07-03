@@ -180,7 +180,7 @@ const _it = (title, callback) => {
     }
 
     /** Show testcase completion detail with time of execution **/
-    process.stdout.write(`${title}: Testcases finished (${Date.now() - starTime}ms)`);
+    process.stdout.write(`${title}: Testcases finished (${Date.now() - startTime}ms)`);
 };
 ```
 
@@ -347,7 +347,7 @@ const _it = (title, callback) => {
     const startTime = Date.now();
 
     /** Show the starting message **/
-    process.stdout.write(`\n${title}: Running Testcases\r`);
+    process.stdout.write(chalk.yellow(`\n${title}: Running Testcases\r`));
 
     try {
         /** Update the total count of testcases **/
@@ -361,7 +361,7 @@ const _it = (title, callback) => {
         testSummary.passed++;
 
         /** Show testcase completion detail with time of execution **/
-        process.stdout.write(chalk.green(`${title}: Testcases finished (${Date.now() - starTime}ms)`));
+        process.stdout.write(chalk.green(`${title}: Testcases finished (${Date.now() - startTime}ms)`));
     } catch(e) {
         /** In case of error, push to errors list **/
         testSummary.errors.push({title, e});
@@ -370,14 +370,14 @@ const _it = (title, callback) => {
         testSummary.failed++;
 
         /** Show testcase completion detail with time of execution **/
-        process.stdout.write(chalk.red(`${title}: Testcases finished (${Date.now() - starTime}ms)`));
+        process.stdout.write(chalk.red(`${title}: Testcases finished (${Date.now() - startTime}ms)`));
     }
 };
 ```
 
 Now if we run our testcases, we will get something like this.
 
-![Colored Testcase result](colored_tc_framework.png)
+![Colored Testcase result](images/colored_tc_framework.png)
 
 ## Conclusion
 Congratulations! You have successfully build your own testing framework. Now that we know how test frameworks work under the hood, maybe we don't need to fight anymore about which one is better.
